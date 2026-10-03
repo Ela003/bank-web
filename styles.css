@@ -59,6 +59,16 @@ a { color: inherit; }
 .btn-quiet { min-height: 32px; padding: 0 9px; color: var(--green); background: transparent; }
 .btn-danger { color: var(--red); background: #fff4f1; }
 .btn-wide { width: 100%; min-height: 47px; margin-top: 5px; }
+.btn-inline { width: auto; min-height: 40px; }
+.login-actions { display: flex; align-items: center; gap: 10px; }
+.login-actions .btn-wide { width: auto; flex: 1; }
+.login-actions .btn-inline { min-height: 47px; margin-top: 5px; }
+.signup-row { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
+.signup-row p { margin: 0; color: var(--muted); font-size: 11px; }
+.signup-row.compact { justify-content: flex-start; padding-top: 10px; margin-top: 12px; border-top: 0; }
+.signup-panel { width: min(100%, 420px); }
+.signup-panel h2 { font-size: clamp(26px, 3vw, 32px); }
+.validation-message { min-height: 14px; color: var(--red); font-size: 10px; line-height: 1.4; }
 .demo-block { margin-top: 27px; padding-top: 20px; border-top: 1px solid var(--line); }
 .demo-label { margin: 0 0 12px; color: var(--muted); font-size: 11px; font-weight: 700; }
 .demo-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
@@ -147,9 +157,7 @@ tbody tr:hover { background: #fbfcf8; }
 .code { color: #37634d; font: 700 10px 'DM Sans', sans-serif; }
 .status { display: inline-flex; align-items: center; gap: 5px; padding: 5px 7px; border-radius: 3px; font-size: 9px; font-weight: 800; letter-spacing: .03em; }
 .status:before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
-.status-pending { color: #9a6d17; background: #fbf2d9; }
-.status-verified, .status-confirmed { color: #286449; background: #e3f0e5; }
-.status-rejected { color: #a7473c; background: #f9e7e2; }
+.status-confirmed { color: #286449; background: #e3f0e5; }
 .actions-cell { white-space: nowrap; }
 .empty-state { padding: 46px 18px; color: var(--muted); text-align: center; }
 .empty-icon { margin-bottom: 9px; color: #b7c5b8; font-size: 25px; }
@@ -197,6 +205,9 @@ tbody tr:hover { background: #fbfcf8; }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 13px; }
 .form-grid .field { margin-bottom: 14px; }
 .form-grid .full { grid-column: 1 / -1; }
+.event-options { display: flex; flex-wrap: wrap; gap: 16px; }
+.event-options label { display: inline-flex; align-items: center; gap: 7px; font-size: 11px; font-weight: 600; }
+.event-options input { width: 16px; min-height: 16px; margin: 0; accent-color: var(--green); }
 .readonly-field { display: flex; align-items: center; min-height: 42px; padding: 0 12px; border: 1px dashed #cfd9ce; border-radius: 5px; color: #597161; background: #f5f8f2; font: 700 11px Manrope, sans-serif; }
 .modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 6px; padding-top: 13px; border-top: 1px solid var(--line); }
 .confirm-summary { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 17px; border-radius: 5px; background: #f2f5ef; }
